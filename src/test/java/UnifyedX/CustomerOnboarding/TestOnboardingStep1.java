@@ -12,6 +12,7 @@ import org.testng.Assert;
 
 import UnifyedX.CustomerOnboarding.PageClasses.PageClass_Step1;
 import UnifyedX.CustomerOnboarding.PageClasses.PageClass_Step2;
+import UnifyedX.CustomerOnboarding.PageClasses.PageClass_Step3;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestOnboardingStep1 {
@@ -49,12 +50,11 @@ public class TestOnboardingStep1 {
 		ObjectStep1.Method_Hardsleep();
 		ObjectStep1.Method_SelectingFourthValues(option4);
 		Assert.assertEquals(ObjectStep1.Method_VerifyErrorMessage(), erromsg);
-		ObjectStep1.Method_VerifyNextCTA_Click();
+		PageClass_Step2 ObjectStep2 = ObjectStep1.Method_VerifyNextCTA_Click();
 		ObjectStep1.Method_Hardsleep();
 		
 		///////////////////////////////////////////////////////////////////
 		
-		PageClass_Step2 ObjectStep2 = new PageClass_Step2(driver);
 		ObjectStep2.Method_VerifyPageTitle();
 		Assert.assertEquals(ObjectStep1.Method_VerifyPageTitle(), PageTitle);
 		ObjectStep2.Method_VerifyUnifyedLogo();
@@ -69,7 +69,7 @@ public class TestOnboardingStep1 {
 		ObjectStep2.Method_SelectingFirstValues(option5);
 		ObjectStep2.Method_VerifyNextCTA_Afterselection();
 		Assert.assertTrue(true);
-		ObjectStep2.Method_VerifyNextCTA_Click();
+		PageClass_Step3 ObjectStep3 = ObjectStep2.Method_VerifyNextCTA_Click();
 		ObjectStep2.Method_Hardsleep();
 		driver.quit();
 	}

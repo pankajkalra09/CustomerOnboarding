@@ -94,8 +94,9 @@ public String Method_VerifyErrorMessage() {
 	
 }
 
-public void Method_VerifyNextCTA_Click() {
+public PageClass_Step2 Method_VerifyNextCTA_Click() {
 	Locator_NextCTA_step1.click();
+	return new PageClass_Step2(driver);
 }
 
 

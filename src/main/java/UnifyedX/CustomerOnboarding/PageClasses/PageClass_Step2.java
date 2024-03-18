@@ -67,7 +67,8 @@ public void Method_SelectingFirstValues(String option5 ) throws Exception {
 		optio3.click();
 	}
 
-public void Method_VerifyNextCTA_Click() {
+public PageClass_Step3 Method_VerifyNextCTA_Click() {
 	Locator_NextCTA_step2.click();
+	return new PageClass_Step3(driver);
 }
 }

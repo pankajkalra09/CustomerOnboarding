@@ -26,15 +26,16 @@ public class PageClass_Step2 extends ReusableComponents{
 	//@FindBy(xpath="//p[contains(text(), 'You can only select 3 options!')]") WebElement Locator_errormessage;
 	
 	//verify if question text is correct we want to see
-	public boolean Method_VerifyQuestionTest() {
+	public void Method_VerifyQuestionTest() {
 		String questiontext = Locator_Question1.getText();
+		
 		boolean questiontxt = questiontext.contains("What do you need");
-		return questiontxt;
-		/*
-		 * if (questiontxt==true) {
-		 * System.out.println("Question text is showing up correctly as: "+questiontext)
-		 * ; } else { System.out.println("Question text is not correct."); }
-		 */
+		//return questiontext;
+		
+		  if (questiontxt==true) {
+		 // System.out.println("Question text is showing up correctly as: "+questiontext)
+		  ; } else { System.out.println("Question text is not correct."); }
+		 
 	}
 	
 	

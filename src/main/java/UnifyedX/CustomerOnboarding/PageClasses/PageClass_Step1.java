@@ -32,6 +32,7 @@ public class PageClass_Step1 extends ReusableComponents{
 	//verify if question text is correct we want to see
 	public void Method_VerifyQuestionTest() {
 		String questiontext = Locator_Question1.getText();
+		//return questiontext;
 		questiontext.equalsIgnoreCase("Pick your three most important challenges?");
 	}
 	

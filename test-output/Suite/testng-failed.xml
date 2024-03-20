@@ -7,16 +7,9 @@
         <methods>
           <include name="CloseBrowser"/>
           <include name="LaunchApplication"/>
-          <include name="FirstTest1"/>
+          <include name="FirstTesta"/>
         </methods>
       </class> <!-- UnifyedX.CustomerOnboarding.Tests.TestOnboardingStep2 -->
-      <class name="UnifyedX.CustomerOnboarding.Tests.TestOnboardingStep1">
-        <methods>
-          <include name="CloseBrowser"/>
-          <include name="LaunchApplication"/>
-          <include name="FirstTest"/>
-        </methods>
-      </class> <!-- UnifyedX.CustomerOnboarding.Tests.TestOnboardingStep1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

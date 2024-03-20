@@ -10,15 +10,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTestClass {
 	public static WebDriver driver;
 	public static Properties prop;
-	
-	public WebDriver initilizeDriver() throws IOException {	
+
+	public WebDriver initilizeDriver() throws IOException {
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
 				+ "//src//main//java//UnifyedX//Onboarding//Resources//GlobalData.properties");
@@ -27,13 +29,11 @@ public class BaseTestClass {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		}
-		else if(browserName.equalsIgnoreCase("firefox")) {
+		} else if (browserName.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir")
 					+ "//src//main//java//UnifyedX//Onboarding//Drivers//geckodriver.exe");
 			driver = new FirefoxDriver();
-		}
-		else if(browserName.equalsIgnoreCase("edge")) {
+		} else if (browserName.equalsIgnoreCase("edge")) {
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")
 					+ "//src//main//java//UnifyedX//Onboarding//Drivers//msedgedriver.exe");
 			driver = new EdgeDriver();
@@ -42,13 +42,14 @@ public class BaseTestClass {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	@BeforeMethod
+
+	@BeforeTest
 	public void LaunchApplication() throws IOException {
-		driver=initilizeDriver();
-		driver.get(prop.getProperty("URL"));	
+		driver = initilizeDriver();
+		driver.get(prop.getProperty("URL"));
 	}
-	
-	@AfterMethod
+
+	@AfterTest
 	public void CloseBrowser() {
 		driver.quit();
 	}

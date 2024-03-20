@@ -20,6 +20,8 @@ public class PageClass_Step2 extends ReusableComponents {
 	WebElement Locator_NextCTA_step2;
 	@FindBy(xpath = "//div[@aria-label='animation']")
 	WebElement Locator_Animation;
+	@FindBy(xpath = "//ul/li/button")
+	List<WebElement> Locator_options_Step2;
 	// @FindBy(xpath="//p[contains(text(), 'You can only select 3 options!')]")
 	// WebElement Locator_errormessage;
 
@@ -46,6 +48,18 @@ public class PageClass_Step2 extends ReusableComponents {
 
 	}
 
+	public boolean Method_VerifyOptionsTextStep2(String opt1, String opt2, String opt3, String opt4, String opt5, String opt6, String opt7, String opt8, String opt9, String opt10) {
+		String[] option = {opt1,opt2,opt3,opt4,opt5,opt6,opt7,opt8,opt9,opt10}; 
+		//List<WebElement> options = driver.findElements(By.xpath("//ul/li/button"));
+		for (int i=0;i<Locator_options_Step2.size();i++) {
+			if(!Locator_options_Step2.get(i).getText().equalsIgnoreCase(option[i]))
+			return false;
+			//System.out.println(Stream.of(options.get(i).getText()).anyMatch(s->s.equalsIgnoreCase("Reducing Cost of Technology")));
+		}
+		//return optionresult;
+		return true;
+	}
+	
 	// Verify if Next CTA is disabled till the user has not selected 3 options.
 	public boolean Method_VerifyNextCTA_Beforeselection() {
 		boolean nextctabefore = Locator_NextCTA_step2.isEnabled();
@@ -69,8 +83,8 @@ public class PageClass_Step2 extends ReusableComponents {
 	public void Method_SelectingFirstValues(String option5) throws Exception {
 
 		List<WebElement> step1options = driver.findElements(By.xpath("//ul/li/button"));
-		WebElement optio3 = step1options.stream().filter(o -> o.getText().equals(option5)).findFirst().orElse(null);
-		optio3.click();
+		WebElement optio5 = step1options.stream().filter(o -> o.getText().equals(option5)).findFirst().orElse(null);
+		optio5.click();
 	}
 
 	public PageClass_Step3 Method_VerifyNextCTA_Click() {

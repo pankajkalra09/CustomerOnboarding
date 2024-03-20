@@ -20,7 +20,7 @@ public class PageClass_Step1 extends ReusableComponents {
 	@FindBy(xpath = "//p[contains(text(), 'You can only select 3 options!')]")
 	WebElement Locator_errormessage;
 	@FindBy(xpath = "//ul/li/button")
-	List<WebElement> Locator_options;
+	List<WebElement> Locator_options_Step1;
 	By optionsBy = By.xpath("//ul/li/button"); // for abstract wait we are passing by element that's why we declare it
 												// like this.
 	By alertmessage = By.xpath("//p[contains(text(), 'You can only select 3 options!')]");
@@ -31,16 +31,16 @@ public class PageClass_Step1 extends ReusableComponents {
 		PageFactory.initElements(driver, this);
 	}
 
-	public boolean Method_VerifyOptionsText(String opt1, String opt2, String opt3, String opt4, String opt5, String opt6) {
+	public boolean Method_VerifyOptionsTextStep1(String opt1, String opt2, String opt3, String opt4, String opt5, String opt6) {
 		String[] option = {opt1,opt2,opt3,opt4,opt5,opt6}; 
 		//List<WebElement> options = driver.findElements(By.xpath("//ul/li/button"));
-		for (int i=0;i<Locator_options.size();i++) {
-			if(Locator_options.get(i).getText().equalsIgnoreCase(option[i]))
-			return true;
+		for (int i=0;i<Locator_options_Step1.size();i++) {
+			if(!Locator_options_Step1.get(i).getText().equalsIgnoreCase(option[i]))
+			return false;
 			//System.out.println(Stream.of(options.get(i).getText()).anyMatch(s->s.equalsIgnoreCase("Reducing Cost of Technology")));
 		}
 		//return optionresult;
-		return false;
+		return true;
 	}
 	// verify if question text is correct we want to see
 	public void Method_VerifyQuestionTest() {
@@ -71,15 +71,15 @@ public class PageClass_Step1 extends ReusableComponents {
 	// wait for the options to get loaded.
 	public List<WebElement> Method_GetOptionsSteps1() {
 		waitForElementToAppear(optionsBy); // wait for elements to get visible first.
-		return Locator_options; // getting all the web elements as a list here.
+		return Locator_options_Step1; // getting all the web elements as a list here.
 	}
 
 	public void Method_GetOptionsByName(String option1, String option2, String option3) throws InterruptedException {
-		WebElement opt_1 = Locator_options.stream().filter(o -> o.getText().equals(option1)).findFirst().orElse(null);
+		WebElement opt_1 = Locator_options_Step1.stream().filter(o -> o.getText().equals(option1)).findFirst().orElse(null);
 		opt_1.click();
-		WebElement opt_2 = Locator_options.stream().filter(o -> o.getText().equals(option2)).findFirst().orElse(null);
+		WebElement opt_2 = Locator_options_Step1.stream().filter(o -> o.getText().equals(option2)).findFirst().orElse(null);
 		opt_2.click();
-		WebElement opt_3 = Locator_options.stream().filter(o -> o.getText().equals(option3)).findFirst().orElse(null);
+		WebElement opt_3 = Locator_options_Step1.stream().filter(o -> o.getText().equals(option3)).findFirst().orElse(null);
 		opt_3.click();
 	}
 

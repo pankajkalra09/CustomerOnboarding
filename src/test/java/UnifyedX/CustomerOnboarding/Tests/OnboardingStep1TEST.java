@@ -34,7 +34,9 @@ public class OnboardingStep1TEST extends BaseTestClass {
 		ObjectStep1.Method_VerifyQuestionTest();
 		// Assert.assertEquals(ObjectStep1.Method_VerifyQuestionTest(), "Pick your three
 		// most important challenges?");
-		Assert.assertTrue(ObjectStep1.Method_VerifyOptionsText(prop.getProperty("Step1option1"), prop.getProperty("Step1option2"), prop.getProperty("Step1option3"), prop.getProperty("Step1option4"), prop.getProperty("Step1option5"), prop.getProperty("Step1option6")));
+		Assert.assertTrue(ObjectStep1.Method_VerifyOptionsTextStep1(prop.getProperty("Step1option1"),
+				prop.getProperty("Step1option2"), prop.getProperty("Step1option3"), prop.getProperty("Step1option4"),
+				prop.getProperty("Step1option5"), prop.getProperty("Step1option6")));
 		ObjectStep1.Method_VerifyAnimation();
 		Assert.assertTrue(true);
 		ObjectStep1.Method_VerifyNextCTA_Beforeselection();
@@ -48,7 +50,7 @@ public class OnboardingStep1TEST extends BaseTestClass {
 		ObjectStep1.Method_SelectingFourthValues(prop.getProperty("Step1option5"));
 		Assert.assertEquals(ObjectStep1.Method_VerifyErrorMessage(), prop.getProperty("Step1erromsg"));
 		ObjectStep1.Method_VerifyNextCTA_Click();
-		//ObjectStep2=ObjectStep1.Method_VerifyNextCTA_Click();
+		// ObjectStep2=ObjectStep1.Method_VerifyNextCTA_Click();
 		ObjectStep1.Method_Hardsleep();
 //			  ObjectStep2.Method_VerifyPageTitle();
 //			  Assert.assertEquals(ObjectStep1.Method_VerifyPageTitle(),

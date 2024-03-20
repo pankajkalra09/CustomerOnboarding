@@ -26,12 +26,22 @@ public class PageClass_Step1 extends ReusableComponents {
 	By alertmessage = By.xpath("//p[contains(text(), 'You can only select 3 options!')]");
 
 	public PageClass_Step1(WebDriver driver) {
-		super(driver);// We are passing life of driver to parent class ReusableComponents as here
-						// driver is getting life from our testclass.
+		super(driver);// We are passing life of driver to parent class ReusableComponents as here driver is getting life from our testclass.
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
+	public boolean Method_VerifyOptionsText(String opt1, String opt2, String opt3, String opt4, String opt5, String opt6) {
+		String[] option = {opt1,opt2,opt3,opt4,opt5,opt6}; 
+		//List<WebElement> options = driver.findElements(By.xpath("//ul/li/button"));
+		for (int i=0;i<Locator_options.size();i++) {
+			if(Locator_options.get(i).getText().equalsIgnoreCase(option[i]))
+			return true;
+			//System.out.println(Stream.of(options.get(i).getText()).anyMatch(s->s.equalsIgnoreCase("Reducing Cost of Technology")));
+		}
+		//return optionresult;
+		return false;
+	}
 	// verify if question text is correct we want to see
 	public void Method_VerifyQuestionTest() {
 		String questiontext = Locator_Question1.getText();

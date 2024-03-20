@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="UnifyedX.CustomerOnboarding.Tests.TestOnboardingStep1">
+      <class name="UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST">
         <methods>
+          <include name="FirstTest"/>
           <include name="CloseBrowser"/>
           <include name="LaunchApplication"/>
-          <include name="FirstTest"/>
         </methods>
-      </class> <!-- UnifyedX.CustomerOnboarding.Tests.TestOnboardingStep1 -->
+      </class> <!-- UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

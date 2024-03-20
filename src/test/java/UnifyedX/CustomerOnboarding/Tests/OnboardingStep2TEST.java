@@ -17,7 +17,7 @@ import UnifyedX.Onboarding.PageClasses.PageClass_Step2;
 import UnifyedX.Onboarding.PageClasses.PageClass_Step3;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestOnboardingStep2 extends BaseTestClass {
+public class OnboardingStep2TEST extends BaseTestClass {
 
 //	public PageClass_Step1 ObjectStep1;
 	public PageClass_Step2 ObjectStep2;

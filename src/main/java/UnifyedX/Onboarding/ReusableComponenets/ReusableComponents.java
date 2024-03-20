@@ -24,7 +24,6 @@ public class ReusableComponents {
 		this.driver = driver;
 
 	}
-
 	public void waitForElementToAppear(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));

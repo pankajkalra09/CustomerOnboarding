@@ -3,8 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    <class name="UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST"/>
       <class name="UnifyedX.CustomerOnboarding.Tests.OnboardingStep2TEST"/>
+      <class name="UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

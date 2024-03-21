@@ -43,13 +43,13 @@ public class BaseTestClass {
 		return driver;
 	}
 
-	@BeforeTest
+	@BeforeTest(alwaysRun=true)
 	public void LaunchApplication() throws IOException {
 		driver = initilizeDriver();
 		driver.get(prop.getProperty("URL"));
 	}
 
-	@AfterTest
+	@AfterTest(alwaysRun=true)
 	public void CloseBrowser() {
 		driver.quit();
 	}

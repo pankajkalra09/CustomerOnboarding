@@ -12,7 +12,7 @@ import UnifyedX.Onboarding.ReusableComponenets.ReusableComponents;
 
 public class PageClass_Step1 extends ReusableComponents {
 
-	WebDriver driver;
+	public WebDriver driver;
 	@FindBy(xpath = "//h1[@aria-label='Pick your three most important challenges']")
 	WebElement Locator_Question1;
 	@FindBy(xpath = "//button[@type='Submit']")
@@ -69,7 +69,7 @@ public class PageClass_Step1 extends ReusableComponents {
 	}
 
 	// wait for the options to get loaded.
-	public List<WebElement> Method_GetOptionsSteps1() {
+	public List<WebElement> Method_WaitGetOptionsSteps1() {
 		waitForElementToAppear(optionsBy); // wait for elements to get visible first.
 		return Locator_options_Step1; // getting all the web elements as a list here.
 	}

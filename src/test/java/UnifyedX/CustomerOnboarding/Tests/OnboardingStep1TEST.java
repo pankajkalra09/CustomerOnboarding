@@ -18,32 +18,25 @@ import UnifyedX.Onboarding.PageClasses.PageClass_Step3;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class OnboardingStep1TEST extends BaseTestClass {
-
-	public PageClass_Step1 ObjectStep1;
-	// public PageClass_Step2 ObjectStep2;
-
 	@Test
-	public void FirstTest() throws Exception {
-		ObjectStep1 = new PageClass_Step1(driver);
+	public void ReadOnlyComponents() throws Exception {
+		PageClass_Step1 ObjectStep1 = new PageClass_Step1(driver);
 		ObjectStep1.Method_VerifyPageTitle();
 		Assert.assertEquals(ObjectStep1.Method_VerifyPageTitle(), prop.getProperty("PageTitle"));
 		ObjectStep1.Method_VerifyUnifyedLogo();
 		Assert.assertTrue(true);
 		ObjectStep1.Method_VerifyUnifyedLogoClickable();
 		Assert.assertTrue(true);
-		ObjectStep1.Method_VerifyQuestionTest();
-		// Assert.assertEquals(ObjectStep1.Method_VerifyQuestionTest(), "Pick your three
-		// most important challenges?");
-		Assert.assertTrue(ObjectStep1.Method_VerifyOptionsTextStep1(prop.getProperty("Step1option1"),
-				prop.getProperty("Step1option2"), prop.getProperty("Step1option3"), prop.getProperty("Step1option4"),
-				prop.getProperty("Step1option5"), prop.getProperty("Step1option6")));
 		ObjectStep1.Method_VerifyAnimation();
 		Assert.assertTrue(true);
 		ObjectStep1.Method_VerifyNextCTA_Beforeselection();
 		Assert.assertFalse(false);
-		ObjectStep1.Method_GetOptionsSteps1();
+		ObjectStep1.Method_WaitGetOptionsSteps1();
+		Assert.assertTrue(ObjectStep1.Method_VerifyOptionsTextStep1(prop.getProperty("Step1option1"),
+		prop.getProperty("Step1option2"), prop.getProperty("Step1option3"), prop.getProperty("Step1option4"),
+		prop.getProperty("Step1option5"), prop.getProperty("Step1option6")));
 		ObjectStep1.Method_GetOptionsByName(prop.getProperty("Step1option1"), prop.getProperty("Step1option2"),
-				prop.getProperty("Step1option3"));
+		prop.getProperty("Step1option3"));
 		ObjectStep1.Method_VerifyNextCTA_Afterselection();
 		Assert.assertTrue(true);
 		ObjectStep1.Method_Hardsleep();
@@ -52,19 +45,5 @@ public class OnboardingStep1TEST extends BaseTestClass {
 		ObjectStep1.Method_VerifyNextCTA_Click();
 		// ObjectStep2=ObjectStep1.Method_VerifyNextCTA_Click();
 		ObjectStep1.Method_Hardsleep();
-//			  ObjectStep2.Method_VerifyPageTitle();
-//			  Assert.assertEquals(ObjectStep1.Method_VerifyPageTitle(),
-//			  prop.getProperty("PageTitle")); ObjectStep2.Method_VerifyUnifyedLogo();
-//			  ObjectStep2.Method_VerifyUnifyedLogoClickable();
-//			  ObjectStep2.Method_VerifyQuestionTest(); Assert.assertTrue(true);
-//			  ObjectStep2.Method_VerifyAnimation(); Assert.assertTrue(true);
-//			  ObjectStep2.Method_VerifyNextCTA_Beforeselection();
-//			  Assert.assertFalse(false);
-//			  ObjectStep2.Method_SelectingFirstValues(prop.getProperty("Step2option6"));
-//			  ObjectStep2.Method_Hardsleep();
-//			  ObjectStep2.Method_VerifyNextCTA_Afterselection(); Assert.assertTrue(true);
-//			  PageClass_Step3 ObjectStep3 = ObjectStep2.Method_VerifyNextCTA_Click();
-//			  ObjectStep2.Method_Hardsleep();
-
 	}
 }

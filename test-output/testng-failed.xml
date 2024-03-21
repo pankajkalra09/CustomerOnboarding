@@ -5,7 +5,7 @@
     <classes>
       <class name="UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST">
         <methods>
-          <include name="FirstTest"/>
+          <include name="ReadOnlyComponents"/>
           <include name="CloseBrowser"/>
           <include name="LaunchApplication"/>
         </methods>

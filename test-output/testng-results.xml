@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-20T09:23:53 EDT" name="Suite" finished-at="2024-03-20T09:24:11 EDT" duration-ms="18746">
+  <suite started-at="2024-03-21T09:00:40 EDT" name="Onboarding_Test_Suite" finished-at="2024-03-21T09:01:01 EDT" duration-ms="21009">
     <groups>
     </groups>
-    <test started-at="2024-03-20T09:23:53 EDT" name="Test" finished-at="2024-03-20T09:24:11 EDT" duration-ms="18746">
+    <test started-at="2024-03-21T09:00:40 EDT" name="Step1_Test" finished-at="2024-03-21T09:01:01 EDT" duration-ms="21009">
       <class name="UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST">
-        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST@48075da3]" started-at="2024-03-20T09:23:53 EDT" name="LaunchApplication" finished-at="2024-03-20T09:24:01 EDT" duration-ms="8188" status="PASS">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST@48075da3]" started-at="2024-03-21T09:00:40 EDT" name="LaunchApplication" finished-at="2024-03-21T09:00:50 EDT" duration-ms="10524" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApplication -->
-        <test-method signature="FirstTest()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST@48075da3]" started-at="2024-03-20T09:24:01 EDT" name="FirstTest" finished-at="2024-03-20T09:24:06 EDT" duration-ms="5054" status="PASS">
+        <test-method signature="ReadOnlyComponents()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST@48075da3]" started-at="2024-03-21T09:00:50 EDT" name="ReadOnlyComponents" finished-at="2024-03-21T09:00:55 EDT" duration-ms="4897" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FirstTest -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST@48075da3]" started-at="2024-03-20T09:24:11 EDT" name="CloseBrowser" finished-at="2024-03-20T09:24:11 EDT" duration-ms="769" status="PASS">
+        </test-method> <!-- ReadOnlyComponents -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST@48075da3]" started-at="2024-03-21T09:01:00 EDT" name="CloseBrowser" finished-at="2024-03-21T09:01:01 EDT" duration-ms="781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
       </class> <!-- UnifyedX.CustomerOnboarding.Tests.OnboardingStep1TEST -->
       <class name="UnifyedX.CustomerOnboarding.Tests.OnboardingStep2TEST">
-        <test-method signature="FirstTesta()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep2TEST@413d1baf]" started-at="2024-03-20T09:24:06 EDT" name="FirstTesta" finished-at="2024-03-20T09:24:11 EDT" duration-ms="4690" status="PASS">
+        <test-method signature="FirstTesta()[pri:0, instance:UnifyedX.CustomerOnboarding.Tests.OnboardingStep2TEST@413d1baf]" started-at="2024-03-21T09:00:55 EDT" name="FirstTesta" finished-at="2024-03-21T09:01:00 EDT" duration-ms="4753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FirstTesta -->
       </class> <!-- UnifyedX.CustomerOnboarding.Tests.OnboardingStep2TEST -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Step1_Test -->
+  </suite> <!-- Onboarding_Test_Suite -->
 </testng-results>

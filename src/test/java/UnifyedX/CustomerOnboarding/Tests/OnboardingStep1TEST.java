@@ -1,6 +1,7 @@
 package UnifyedX.CustomerOnboarding.Tests;
 
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import UnifyedX.CustomerOnboarding.TestComponents.BaseTestClass;
@@ -46,4 +48,6 @@ public class OnboardingStep1TEST extends BaseTestClass {
 		// ObjectStep2=ObjectStep1.Method_VerifyNextCTA_Click();
 		ObjectStep1.Method_Hardsleep();
 	}
+	
+	
 }

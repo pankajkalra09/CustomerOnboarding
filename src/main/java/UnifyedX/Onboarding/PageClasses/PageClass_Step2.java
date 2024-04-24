@@ -20,7 +20,7 @@ public class PageClass_Step2 extends ReusableComponents {
 	WebElement Locator_NextCTA_step2;
 	@FindBy(xpath = "//div[@aria-label='animation']")
 	WebElement Locator_Animation;
-	@FindBy(xpath = "//ul/li/button")
+	@FindBy(xpath = "//div[@class='basis-4/6']//ul/li/button")
 	List<WebElement> Locator_options_Step2;
 	// @FindBy(xpath="//p[contains(text(), 'You can only select 3 options!')]")
 	// WebElement Locator_errormessage;

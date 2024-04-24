@@ -18,16 +18,17 @@ import UnifyedX.Onboarding.PageClasses.PageClass_Step3;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class OnboardingStep2TEST extends BaseTestClass {
-	public PageClass_Step2 ObjectStep2;
+	//public PageClass_Step2 ObjectStep2;
 	@Test
 	public void FirstTesta() throws Exception {
-		ObjectStep2 = new PageClass_Step2(driver);
+		PageClass_Step2 ObjectStep2 = new PageClass_Step2(driver);
 		ObjectStep2.Method_VerifyPageTitle();
 		Assert.assertEquals(ObjectStep2.Method_VerifyPageTitle(), prop.getProperty("PageTitle"));
 		ObjectStep2.Method_VerifyUnifyedLogo();
 		ObjectStep2.Method_VerifyUnifyedLogoClickable();
 		ObjectStep2.Method_VerifyQuestionTest();
 		Assert.assertTrue(true);
+		System.out.println("till here");
 		Assert.assertTrue(ObjectStep2.Method_VerifyOptionsTextStep2(prop.getProperty("Step2option1"),
 		prop.getProperty("Step2option2"), prop.getProperty("Step2option3"), prop.getProperty("Step2option4"),
 		prop.getProperty("Step2option5"), prop.getProperty("Step2option6"), prop.getProperty("Step2option7"),
